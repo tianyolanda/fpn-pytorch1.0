@@ -1,15 +1,18 @@
 # fpn-pytorch1.0
 ## Introduction
-This repo mainly based on [jwyang/fpn.pytorch](https://github.com/jwyang/fpn.pytorch) and [jwyang/faster-rcnn.pytorch](https://github.com/jwyang/faster-rcnn.pytorch/tree/pytorch-1.0), I combine  code to let it ables to work in pytorch1.0 framework and get a more 75.8mAP(higher than faster rcnn & fpn0.4 repo) when training pascal voc 2007.
+This repo mainly based on [jwyang/fpn.pytorch](https://github.com/jwyang/fpn.pytorch) and [jwyang/faster-rcnn.pytorch](https://github.com/jwyang/faster-rcnn.pytorch/tree/pytorch-1.0). I combine some code to let it ables to work in pytorch1.0 framework and get a more 75.8mAP(higher than faster rcnn & fpn0.4 repo) when training pascal voc 2007. 
 
-More usage introduction can be found in the upper two repo.
+Iherent from them, this repo support multi GPU training, GPU version NMS and ROI Align pooling. Thanks a lof for jwyang. More usage introduction can be found in the upper two repo.
 
 # Demo Result 
-![](https://github.com/tianyolanda/fpn-pytorch1.0/blob/master/images/2007_000243_det.jpg) ![](https://github.com/tianyolanda/fpn-pytorch1.0/blob/master/images/2007_000061_det.jpg)
+![](https://github.com/tianyolanda/fpn-pytorch1.0/blob/master/images/000002_det.jpg)
+![](https://github.com/tianyolanda/fpn-pytorch1.0/blob/master/images/000013_det.jpg)
+![](https://github.com/tianyolanda/fpn-pytorch1.0/blob/master/images/000020_det.jpg)
+![](https://github.com/tianyolanda/fpn-pytorch1.0/blob/master/images/2007_000243_det.jpg) 
+![](https://github.com/tianyolanda/fpn-pytorch1.0/blob/master/images/2007_000061_det.jpg)
 ![](https://github.com/tianyolanda/fpn-pytorch1.0/blob/master/images/2007_000175_det.jpg)
 ![](https://github.com/tianyolanda/fpn-pytorch1.0/blob/master/images/2011_005266_det.jpg)
 ![](https://github.com/tianyolanda/fpn-pytorch1.0/blob/master/images/2011_005252_det.jpg)
-
 
 # Benchmarking
 
@@ -24,7 +27,7 @@ Res-101    | 1  RTX 2080  | 1 | 1e-3 | 5  | 12  |  \ | \ | 75.8
 
 ## Preparation
 
-1. clone the code
+clone the code
 
 ```
 git clone https://github.com/tianyolanda/fpn-pytorch1.0.git
@@ -54,7 +57,7 @@ visdom are support for visilization of loss curve
 ### Pretrained Model
 Pretrained Model we need for FPN is ResNet101.
 
-Download from here [jwyang/faster-rcnn.pytorch]https://github.com/jwyang/faster-rcnn.pytorch#pretrained-model
+Download from here [jwyang/faster-rcnn.pytorch](https://github.com/jwyang/faster-rcnn.pytorch#pretrained-model)
 
 Download it and put it into the data/pretrained_model/.
 
@@ -99,12 +102,10 @@ Here I provide my trained FPN model(trained on pascal voc 2007, can detect 20 ki
 Download the model from [baiduyun](https://pan.baidu.com/s/1QIKIPkFTdMS0_SX1yFvKug)
 
 ## usage 
-put the trained FPN model in 
-> /fpn-pytorch1.0/models/res101/pascal_voc/fpn_1_12_10021.pth
+put the trained FPN model in /fpn-pytorch1.0/models/res101/pascal_voc/fpn_1_12_10021.pth
 
 ## check demo image detection result
-Put images to be detected in 
-> /fpn-pytorch1.0/images/ 
+Put images to be detected in /fpn-pytorch1.0/images/ 
 
 Then run demo.py
 ```

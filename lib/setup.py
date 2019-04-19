@@ -57,7 +57,7 @@ def get_extensions():
 
 
 setup(
-    name="faster_rcnn",
+    name="fpn",
     version="0.1",
     description="object detection in pytorch",
     packages=find_packages(exclude=("configs", "tests",)),

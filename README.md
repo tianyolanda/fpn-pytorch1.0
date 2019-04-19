@@ -1,6 +1,6 @@
 # fpn-pytorch1.0
 ## Introduction
-This repo mainly based on [jwyang/fpn.pytorch](https://github.com/jwyang/fpn.pytorch) and [jwyang/faster-rcnn.pytorch](https://github.com/jwyang/faster-rcnn.pytorch/tree/pytorch-1.0), I combine little code to let it works in pytorch1.0 framework and get a more 75.8mAP(higher than faster rcnn repo & fpn0.4 repo) when training pascal voc 2007.
+This repo mainly based on [jwyang/fpn.pytorch](https://github.com/jwyang/fpn.pytorch) and [jwyang/faster-rcnn.pytorch](https://github.com/jwyang/faster-rcnn.pytorch/tree/pytorch-1.0), I combine  code to let it ables to work in pytorch1.0 framework and get a more 75.8mAP(higher than faster rcnn & fpn0.4 repo) when training pascal voc 2007.
 
 More usage introduction can be found in the upper two repo.
 
@@ -90,7 +90,25 @@ train voc07+12:
 
 ```
 CUDA_VISIBLE_DEVICES=0 python trainval_net.py --dataset pascal_voc_0712 --cuda
+```
 
+# Use trained FPN model 
+## Download
+Here I provide my trained FPN model(trained on pascal voc 2007, can detect 20 kinds of objects), you can simply test it without training. 
+
+Download the model from [baiduyun](https://pan.baidu.com/s/1QIKIPkFTdMS0_SX1yFvKug)
+
+## usage 
+put the trained FPN model in 
+> /fpn-pytorch1.0/models/res101/pascal_voc/fpn_1_12_10021.pth
+
+## check demo image detection result
+Put images to be detected in 
+> /fpn-pytorch1.0/images/ 
+
+Then run demo.py
+```
+CUDA_VISIBLE_DEVICES=0 python demo.py --dataset pascal_voc --checkepoch 12 --cuda
 ```
 
 # TODO List

@@ -2,7 +2,7 @@
 ## Introduction
 This repo mainly based on [jwyang/fpn.pytorch](https://github.com/jwyang/fpn.pytorch) and [jwyang/faster-rcnn.pytorch](https://github.com/jwyang/faster-rcnn.pytorch/tree/pytorch-1.0). I combine some code to let it ables to work in pytorch1.0 framework and get a more 75.8mAP(higher than faster rcnn & fpn0.4 repo) when training pascal voc 2007. 
 
-Iherent from them, this repo support multi GPU training, GPU version NMS and ROI Align pooling. Thanks a lof for jwyang. More usage introduction can be found in the upper two repo.
+Iherent from them, this repo support multi GPU training, GPU version NMS and ROI Align pooling. Thanks a lot for jwyang. More usage introduction can be found in the upper two repo.
 
 # Demo Result 
 ![](https://github.com/tianyolanda/fpn-pytorch1.0/blob/master/images/000002_det.jpg)

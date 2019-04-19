@@ -1,11 +1,11 @@
 # fpn-pytorch1.0
 ## Introduction
-This repo mainly based on [jwyang/fpn.pytorch](https://github.com/jwyang/fpn.pytorch) and [jwyang/faster-rcnn.pytorch](https://github.com/jwyang/faster-rcnn.pytorch/tree/pytorch-1.0), I combine little code to let it works in pytorch1.0 framework and get a more reasonable mAP when training pascal voc 2007 and 07+12.
+This repo mainly based on [jwyang/fpn.pytorch](https://github.com/jwyang/fpn.pytorch) and [jwyang/faster-rcnn.pytorch](https://github.com/jwyang/faster-rcnn.pytorch/tree/pytorch-1.0), I combine little code to let it works in pytorch1.0 framework and get a more 75.8mAP(higher than faster rcnn repo & fpn0.4 repo) when training pascal voc 2007.
 
 More usage introduction can be found in the upper two repo.
 
 # Demo Result 
-[](https://github.com/tianyolanda/fpn-pytorch1.0/blob/master/images/2007_000243_det.jpg)
+[1](https://github.com/tianyolanda/fpn-pytorch1.0/blob/master/images/2007_000243_det.jpg)
 [](https://github.com/tianyolanda/fpn-pytorch1.0/blob/master/images/2007_000061_det.jpg)
 [](https://github.com/tianyolanda/fpn-pytorch1.0/blob/master/images/2007_000175_det.jpg)
 [](https://github.com/tianyolanda/fpn-pytorch1.0/blob/master/images/2011_005266_det.jpg)

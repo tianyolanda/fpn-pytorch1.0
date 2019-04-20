@@ -33,7 +33,7 @@ from model.roi_layers import nms
 from model.rpn.bbox_transform import bbox_transform_inv
 from model.utils.net_utils import save_net, load_net, vis_detections
 from model.utils.blob import im_list_to_blob
-from model.faster_rcnn.resnet import resnet
+from model.fpn.resnet import resnet
 import pdb
 
 try:
@@ -46,7 +46,7 @@ def parse_args():
   """
   Parse input arguments
   """
-  parser = argparse.ArgumentParser(description='Train a Fast R-CNN network')
+  parser = argparse.ArgumentParser(description='Train a FPN network')
   parser.add_argument('--dataset', dest='dataset',
                       help='training dataset',
                       default='pascal_voc', type=str)
@@ -162,7 +162,7 @@ if __name__ == '__main__':
   if not os.path.exists(input_dir):
     raise Exception('There is no input directory for loading network from ' + input_dir)
   load_name = os.path.join(input_dir,
-    'faster_rcnn_{}_{}_{}.pth'.format(args.checksession, args.checkepoch, args.checkpoint))
+    'fpn_{}_{}_{}.pth'.format(args.checksession, args.checkepoch, args.checkpoint))
 
   pascal_classes = np.asarray(['__background__',
                        'aeroplane', 'bicycle', 'bird', 'boat',
